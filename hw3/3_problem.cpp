@@ -24,15 +24,15 @@
                     // и если значение в словаре[amt] меньше, чем для случая, в котором мы находимся
                     if (search->second <= cnt) {
                         // то нет смысла смотреть, что будет дальше, так как есть вариант по-лучше
-                        continue
+                        continue;
                     }
                     // иначе находим новый минимум операций для достижения данного amt
                     if (search->second > cnt) {
-                        search->second = cnt
+                        search->second = cnt;
                     }
                 } else {
                     // либо dict[amt] не существует, тогда заведем новый
-                    dict.insert(pair<int, int>(amt, cnt))
+                    dict.insert(pair<int, int>(amt, cnt));
                 }
                 for (int i = coins.size() - 1; i >= 0; --i) {
                     // поскольку это bfs, то 1ое полученное значение и есть наименьший ответ
